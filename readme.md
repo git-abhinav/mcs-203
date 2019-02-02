@@ -1,6 +1,6 @@
 # Data Mining Proposal
 
-#### By : (_Abhinav, Ayush, Divesh, Vrinda_)
+#### _By : (Abhinav, Ayush, Divesh, Vrinda_)
 
 
 
