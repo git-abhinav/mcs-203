@@ -11,5 +11,6 @@ for(i in seq(1, dim(dataSet)[1])){
     dataSet$season[i] = "rainy"
   else
     dataSet$season[i] = "winter"
+  dataSet$quarter[i] = as.integer(monthColumn[i] / 4) + 1
 }
 write.csv(dataSet, file = "pollution.csv")
