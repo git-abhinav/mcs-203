@@ -27,3 +27,12 @@ https://data.gov.in/node/6284968
 * Exploratory data analysis using visualization tools.
 * Clustering
 * Predictive modeling
+
+
+## Preprocessing
+> _Date: 4th Feb, 2019_
+* Season column added according to the date in Orissa.
+* Type of location ready for classification or regression.
+
+
+
