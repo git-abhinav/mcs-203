@@ -35,5 +35,6 @@ https://data.gov.in/node/6284968
 * Type of location ready for classification or regression.
 > _Date: 5th Feb, 2019_
 * Rpart code ready, [take a look Divesh](/rpart.R)
-
+* Decision tree analysis
+  ![Decision Tree](Rplot.png)
 
