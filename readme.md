@@ -34,6 +34,6 @@ https://data.gov.in/node/6284968
 * Season column added according to the date in Orissa.
 * Type of location ready for classification or regression.
 > _Date: 5th Feb, 2019_
-* Rpart code ready, [Take a look Divesh](/rpart.R)
+* Rpart code ready, [take a look Divesh](/rpart.R)
 
 
