@@ -38,5 +38,5 @@ https://data.gov.in/node/6284968
 * Decision tree analysis 
 ![Decision Tree](Rplot.png)
 * Classes 
-[Classes](/locationType.png)
+![Classes](/locationType.png)
 
