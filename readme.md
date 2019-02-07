@@ -37,6 +37,6 @@ https://data.gov.in/node/6284968
 * Rpart code ready, [take a look Divesh](/rpart.R)
 * Decision tree analysis 
 ![Decision Tree](Rplot.png)
-* Classes in the dataset 
+* Classes in the pollution dataset : 
 ![Classes](/locationType.png)
 
