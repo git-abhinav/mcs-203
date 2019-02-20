@@ -34,6 +34,6 @@ https://data.gov.in/node/6284968
 * Instustry wise Pollutants visualization.
 > _Date: 20th Feb, 2019_
 * Visualization part 
-* [NO2, Rural vs Industrail](/no2.png)
-* [SO2, Rural vs Industrail](/so2.png)
-* [RSPM.PM10, Rural vs Industrail](/RSPM.PM10.png)
+* ![NO2, Rural vs Industrail](/no2.png)
+* ![SO2, Rural vs Industrail](/so2.png)
+* ![RSPM.PM10, Rural vs Industrail](/RSPM.PM10.png)
