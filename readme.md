@@ -31,7 +31,7 @@ https://data.gov.in/node/6284968
 4. Exploratory data analysis.
 ## Visualization 
 > _Date: 11th Feb, 2019_
-* Instustry wise Pollutants visualization.
+[] Instustry wise Pollutants visualization.
 > _Date: 20th Feb, 2019_
 * Visualization part 
 * ![NO2, Rural vs Industrail](/no2.png)
