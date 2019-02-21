@@ -37,5 +37,4 @@ https://data.gov.in/node/6284968
 * ![NO2, Rural vs Industrail](/no2.png)
 * ![SO2, Rural vs Industrail](/so2.png)
 * ![RSPM.PM10, Rural vs Industrail](/RSPM.PM10.png)
-### _Here we can infer that major factor for SO2 and NO2 pollutants is industrail pollution and RSPM.PM10 
-pollutants concentration is almost same for industrail and rural areas in Orissa. 
+### _Here we can infer that major factor for SO2 and NO2 pollutants is industrail pollution and RSPM.PM10 pollutants concentration is almost same for industrail and rural areas in Orissa._ 
