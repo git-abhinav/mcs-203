@@ -8,3 +8,4 @@ for(i in seq(1:length(a)))
   tobedeletdrows = c(tobedeletdrows, which(is.na(d[i])))
 }
 data = data[-tobedeletdrows,]
+write.csv(data, "pollution_with_no_na.csv")

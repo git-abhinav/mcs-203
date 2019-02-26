@@ -16,3 +16,8 @@ df = data.frame(
   "Pneumonia"=sample(seq(0,15), 365, replace = TRUE),
   "emphysema"=sample(seq(0,15), 365, replace = TRUE)
 )
+rr = sample(seq(1,365), 5)
+rc = sample(seq(1,length(cases)), 3)
+df[rr, rc] = NA
+write.csv(df, "health_data.csv")
+ 
