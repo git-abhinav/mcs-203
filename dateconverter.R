@@ -81,13 +81,15 @@ ggplot(data = d, mapping = aes(y = SO2, x = 	City.Town.Village.Area	)) +
 data = read.csv("pollution_with_no_na.csv")
 # date converter 
 dt = data$Sampling.Date
+xd = c()
 for(i in seq(1,length(dt))){
   d = strsplit(as.character(dt[i]),"-")[[1]][1]
   m = strsplit(as.character(dt[i]),"-")[[1]][2]
   y = strsplit(as.character(dt[1]),"-")[[1]][3]
   x = paste(d,m,(2000+as.integer(y)))
   x = gsub(" ", "-", x)
-  data$Sampling.Date[i] = x 
+  xd[i] = x
+  #data$Sampling.Date[i] = x 
 }
 data$Sampling.Date
 
