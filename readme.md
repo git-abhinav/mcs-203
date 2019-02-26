@@ -16,6 +16,8 @@ Details of ambient air quality with respect to air quality parameters, like Sulf
 * Exploratory data analysis using visualization tools.
 * Clustering
 * Predictive modeling
+## Preliminary Analysis
+As the data is about the collection of pollution levels around many areas of Orissa and attributes like _Agency_ is of no use for our analysis, it's a constant value attribute after examining the data we also found out the we could also make use the _year quarters_ and _season_ for our analysis, so we wrote the code in R to add those attributes to our dataset the we download from data.gov.   
 ## Preprocessing
 > _Date: 4th Feb, 2019_
 * Season column added according to the date in Orissa.
