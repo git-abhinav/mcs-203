@@ -86,13 +86,170 @@ for(i in seq(1,length(dt))){
   d = strsplit(as.character(dt[i]),"-")[[1]][1]
   m = strsplit(as.character(dt[i]),"-")[[1]][2]
   y = strsplit(as.character(dt[1]),"-")[[1]][3]
-  x = paste(d,m,(2000+as.integer(y)))
+  x = paste((2000+as.integer(y)), m,d)
   x = gsub(" ", "-", x)
   xd[i] = x
   #data$Sampling.Date[i] = x 
 }
-data$Sampling.Date
+data$Sampling.Date= xd
+#write.csv(data, "pollution_with_no_na_and_date_as_what_i_wanted.csv")
 
 
 
+
+
+
+
+
+#MAIN PART BRO
+data = read.csv("pollution_with_no_na_and_date_as_what_i_wanted.csv")
+alldates = seq(as.Date('2015/01/01'), as.Date('2015/12/31'), by="day")
+
+tempdata = data
+
+datatoprint = data.frame(
+  dates = c(),
+  no2 = c(),
+  so2 = c(),
+  pm2.5 = c(),
+  pm10 = c()
+)
+
+
+d = c()
+no2 = c()
+
+
+so2 = c()
+pm2.5 = c()
+
+
+pm10 = c()
+
+j = 0
+
+
+
+
+for(i in seq(1,length(alldates)))
+{
+    whichallhave = which(alldates[i]==data$Sampling.Date)
+    if(length(whichallhave)>0)
+    {
+      j = j+1
+      d[j] = as.character(alldates[i])
+      no2[j]=mean(data$NO2[whichallhave])
+      so2[j]=mean(data$SO2[whichallhave])
+      pm2.5[j]=mean(data$PM.2.5[whichallhave])
+      pm10[j]=mean(data$RSPM.PM10[whichallhave])
+    }
+}
+
+
+datatoprint = data.frame(
+  "dates"=d,
+  "no2"=no2,
+  "so2"=so2,
+  "pm2.5"=pm2.5,
+  "pm10"=pm10
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ggplot(head(datatoprint), aes(x=dates, y=so2))+
+  geom_point(col="red")
+  
+
+
+
+ggplot(head(datatoprint), aes(dates, y= c(no2,so2)) +
+  geom_point(col=c("red","green")) 
+
+
+
+#ggplot(datatoprint, aes(x=dates, y = so2, color = "red"))
+#geom_point(aes(y = no2, col = "green"))
+#geom_point(aes(y = pm10, col = "blue"))
+
+
+
+
+#ggplot(data = d, mapping = aes(y = SO2, x = 	City.Town.Village.Area	)) +
+#  geom_point()
+
+ggplot(datatoprint, aes(x = dates, y = no2)) +
+  geom_point() +
+  stat_smooth()
+  
+
+
+
+
+
+
+
+g <- ggplot(datatoprint, aes(dates))
+g <- g + geom_line(aes(y=no2), colour="red")
+g <- g + geom_line(aes(y=so2), colour="green")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# This is final 
+# dates are like-year month date
+monthIndex = c()
+counter = 1
+m = c()
+for(i in seq())
+{
+  if()
+}
+
+#FOR NO2 
+ggplot(head(datatoprint), aes(x=dates, y=so2))+
+geom_bar(stat="identity")
+
+
+#FORSO2
+ggplot(head(datatoprint), aes(x=dates, y=so2))+
+  geom_bar(stat="identity")
+
+
+
+#FORPM2.5
+
+
+#FORPM10
 
