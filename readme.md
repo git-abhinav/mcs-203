@@ -50,3 +50,6 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![SO2](SO2_scatter_plot.png)
 ![PM2.5](pm2.5_scatetr_plot.png)
 ![PM10](pm10_scatter_plot.png)
+## FIRST ANALYSIS
+![first analysis](first_analysis.png)
+> From here what we can deduce is more the pollutant PM2.5 level more is the number of cases of Nephrology.
