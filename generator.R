@@ -21,4 +21,30 @@ df = data.frame(
 #df[rr, rc] = NA
 write.csv(df, "health_data.csv")
 
- 
+
+
+
+
+
+
+### add biasness
+
+h = read.csv("health_data.csv")
+h_dates = h$dates
+#for(i in seq(1,length(h_dates)))
+#{
+#  h_month = strsplit(as.character(h_dates[1]),"-")[[1]][2]
+#  if(h_month<3 || h_month>9)
+#  {
+    for(j in seq(1, dim(h)[2]))
+    {
+      if(j!=2)
+      {
+        randombias = sample(seq(4,8), 1)
+        h[c(1:60,300:365),j] = h[c(1:60,300:365),j] + randombias
+      }
+    }
+  #}
+#}
+
+write.csv(h, "health_data_orrisa.csv")

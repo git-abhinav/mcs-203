@@ -92,7 +92,7 @@ for(i in seq(1,length(dt))){
   #data$Sampling.Date[i] = x 
 }
 data$Sampling.Date= xd
-#write.csv(data, "pollution_with_no_na_and_date_as_what_i_wanted.csv")
+write.csv(data, "pollution_with_no_na_and_date_as_what_i_wanted.csv")
 
 
 
@@ -102,7 +102,7 @@ data$Sampling.Date= xd
 
 
 #MAIN PART BRO
-data = read.csv("pollution_with_no_na_and_date_as_what_i_wanted.csv")
+data = read.csv("pollution_with_no_na_and_date_fine.csv")
 alldates = seq(as.Date('2015/01/01'), as.Date('2015/12/31'), by="day")
 
 tempdata = data
@@ -133,9 +133,10 @@ j = 0
 
 for(i in seq(1,length(alldates)))
 {
-    whichallhave = which(alldates[i]==data$Sampling.Date)
+    whichallhave = which(alldates[i]==as.character(data$Sampling.Date))
     if(length(whichallhave)>0)
     {
+      cat("mathc")
       j = j+1
       d[j] = as.character(alldates[i])
       no2[j]=mean(data$NO2[whichallhave])
@@ -169,7 +170,7 @@ datatoprint = data.frame(
 
 
 
-ggplot(head(datatoprint), aes(x=dates, y=so2))+
+ggplot(datatoprint, aes(x=dates, y=so2))+
   geom_point(col="red")
   
 
@@ -242,14 +243,55 @@ ggplot(head(datatoprint), aes(x=dates, y=so2))+
 geom_bar(stat="identity")
 
 
+
+
+#TO GET MEAN FROM ALL THE MONTHS
+p=1
+m=c()
+no2m = c()
+for(i in seq(1,length(datatoprint)))
+{
+  month=as.integer(strsplit(as.character(datatoprint$dates[1]), "-")[[1]][2])
+  strsplit(as.character(datatoprint$dates[1]), "-")[[1]][2]
+  if(p!=month)
+  {
+    m=c()
+  }
+  
+  
+}
+
+
+
 #FORSO2
-ggplot(head(datatoprint), aes(x=dates, y=so2))+
-  geom_bar(stat="identity")
+ggplot(datatoprint, aes(x=dates, y=so2))+
+  geom_point(col="black")+
+  labs(title="SO2 Levels Overthe year")+
+  xlab("Over the year")+ 
+  ylab("Pollutants Levels")
 
 
+
+#FORNO2
+ggplot(datatoprint, aes(x=dates, y=no2))+
+geom_point(col="blue")+
+labs(title="NO2 Levels Overthe year")+
+xlab("Over the year")+ 
+ylab("Pollutants Levels")
 
 #FORPM2.5
 
+ggplot(datatoprint, aes(x=dates, y=pm2.5))+
+geom_point(col="green")+
+labs(title="PM2.5 Levels Over the year")+
+xlab("Over the year")+ 
+ylab("Pollutants Levels")
 
-#FORPM10
+
+#FOR PM10
+ggplot(datatoprint, aes(x=dates, y=pm10))+
+geom_point(col="red")+
+labs(title="PM10 Levels Over the year")+
+xlab("Over the year")+ 
+ylab("Pollutants Levels")
 
