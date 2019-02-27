@@ -46,4 +46,7 @@ As the data is about the collection of pollution levels around many areas of Ori
 * Search for new dataset and associate it with data we have.
 > _Date: 27th Feb, 2019_
 ### Scatter plots
-![NO2](no2_scatter_plot.png)
+![NO2](no2_scater_plot.png)
+![SO2](SO2_scatter_plot.png)
+![PM2.5](pm2.5_scatetr_plot.png)
+![PM10](pm10_scatter_plot.png)
