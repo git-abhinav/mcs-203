@@ -44,3 +44,6 @@ As the data is about the collection of pollution levels around many areas of Ori
 ### _Here we can infer that major factor for SO2 and NO2 pollutants is industrail pollution and RSPM.PM10 pollutants concentration is almost same for industrail and rural areas in Orissa._ 
 > _Date: 25th Feb, 2019_
 * Search for new dataset and associate it with data we have.
+> _Date: 27th Feb, 2019_
+### Scatter plots
+![NO2](no2_scatter_plot.png)
