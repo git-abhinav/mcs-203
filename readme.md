@@ -60,5 +60,5 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![Yerly](yearly_pollutant.png)
 > ## Here we had to normalize the data since the ranges for the pollutant levels differs vastly.
 ![canttel](can_not_tell_anything.png)
-
+> ## From here we can't say anything that whether the levels of NO2 are causing increase or decrease in the cases of Nephrology. 
 
