@@ -87,10 +87,23 @@ for(i in seq(2,dim(datatoprint)[2]))
   normalizedData[,i] = normalizeColumn(datatoprint[,i])
   cat("sd",sd(normalizedData[,i]),"mean",mean(normalizedData[,i]),"\n")
 }
+#################
+#################
+#################
+#################
+#################
+#################
+#################
 plot(x=-9,y=-9,xlim=c(0,length(datatoprint$dates)), ylim=c(-1,5))
 points(x=datatoprint$dates, y=normalizedData$no2, col="red")
 points(x=datatoprint$dates, y=normalizedData$so2, col="green")
 points(x=datatoprint$dates, y=normalizedData$pm2.5, col="blue")
+#################
+#################
+#################
+#################
+#################
+
 # FOR OUTLIER CAPPING
 capoutlier <- function(column){
   quantiles <- quantile(column, c(.03, .97 ))
@@ -103,5 +116,55 @@ capoutlier <- function(column){
 #{
 #  normalizedData[,i] = capoutlier(normalizedData[,i])
 #}
-H 
 
+
+ggplot(datatoprint, aes(x=dates, y=normalizedData$pm10))+
+  geom_point(col="red")+
+  labs(title="PM10 Levels Over the year")+
+  xlab("Over the year")+ 
+  ylab("Pollutants Levels")
+  
+
+#g <- ggplot(normalizedData, aes(dates))
+#g <- g + geom_line(aes(y=normalizedData$pm2.5), colour="red")
+#g <- g + geom_line(aes(y=normalizedData$pm10), colour="green")
+
+
+
+
+
+s = sort(
+    sample(seq(1,307),100, replace = FALSE)
+)
+plot(
+     x=-9,
+     y=-9,
+     xlim=c(0,length(datatoprint$dates)), 
+     ylim=c(-2,5),
+     main="Yearly pollutants levels",
+     xlab="Yealy",
+     ylab="Levels",
+     
+)
+lines(
+      legend(
+            "topleft",
+            c("NO2","SO2","PM2.5", "PM10"),
+            fill=c("red","green", "blue", "black")
+            )
+  )
+lines(x=datatoprint$dates[s], y=normalizedData$no2[s], col="red")
+lines(x=datatoprint$dates[s], y=normalizedData$so2[s], col="green")
+lines(x=datatoprint$dates[s], y=normalizedData$pm2.5[s], col="blue")
+lines(x=datatoprint$dates[s], y=normalizedData$pm10[s], col="black")
+
+
+
+
+
+
+#FOR HEALTH DATA 
+
+
+
+h = read.csv("health_data_orrisa.csv")
