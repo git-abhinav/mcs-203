@@ -59,3 +59,6 @@ As the data is about the collection of pollution levels around many areas of Ori
 ### Yearly Analysis
 ![Yerly](yearly_pollutant.png)
 > ## Here we had to normalize the data since the ranges for the pollutant levels differs vastly.
+![canttel](can_not_tell_anything.png)
+
+
