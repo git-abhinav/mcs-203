@@ -136,7 +136,7 @@ for(i in seq(1,length(alldates)))
     whichallhave = which(alldates[i]==as.character(data$Sampling.Date))
     if(length(whichallhave)>0)
     {
-      cat("mathc")
+      #cat("mathc")
       j = j+1
       d[j] = as.character(alldates[i])
       no2[j]=mean(data$NO2[whichallhave])
@@ -294,4 +294,34 @@ geom_point(col="red")+
 labs(title="PM10 Levels Over the year")+
 xlab("Over the year")+ 
 ylab("Pollutants Levels")
+
+
+
+
+
+
+
+
+### 1st March
+library(ggplot2)
+df = data.frame(
+  dates=datatoprint$dates,
+  y1=datatoprint$pm2.5,
+  y2=datatoprint$pm10
+)
+
+s=sample(seq(1,length(df$dates)),100)
+s = sort(s)
+plot(x=0,y=0,xlim=c(1,200),ylim=c(1,200))
+points(df$dates, df$y1, col = "green", pch = 1)
+points(df$dates, df$y2, col = "red", pch = 1)
+
+
+
+df <- data.frame(x=df$dates, y1=df$y1, y2=df$y2)
+ggplot(df, aes(dates, y = value, color = variable)) +
+  geom_point(aes(y = df$y1, col = "y1")) +
+  geom_point(aes(y = df$y2, col = "y2"))
+
+
 
