@@ -52,4 +52,10 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![PM10](pm10_scatter_plot.png)
 ## FIRST ANALYSIS
 ![first analysis](first_analysis.png)
-> From here what we can deduce is more the pollutant PM2.5 level more is the number of cases of Nephrology.
+> ## From here what we can deduce is more the pollutant PM2.5 level more is the number of cases of **Emphysema**.
+
+
+> _Date: 1st March, 2019_
+### Yearly Analysis
+![Yerly](yearly_pollutant.png)
+> ## Here we had to normalize the data since the ranges for the pollutant levels differs vastly.
