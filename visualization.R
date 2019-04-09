@@ -3,13 +3,13 @@ head(d)
 ggplot(d, aes(x=Type.of.Location))+geom_bar()
 # geom is for barchart, aes - aesthatics 
 
-attributesName = c("SO2",	"NO2", "RSPM.PM10")
+attributesName = c("SO2",	"NO2", "RSPM.PM10", "PM.2.5")
 
 # Indexes 
 # 1 SO2
 # 2 NO2
 # 3 RSPM.PM10
-
+# 4 PM2.5
 
 rowsWithIndustrialPollution = which(d$Type.of.Location == "Industrial Area")
 #rowsWithRuralPollution = which(d$Type.of.Location == "Rural and other Areas Residential")
@@ -22,7 +22,7 @@ rowsWithRuralPollution = rowsWithRuralPollution[-rowsWithIndustrialPollution]
 IndustrialMean = c()
 RuralMean = c()
 
-for(i in 1:3)
+for(i in 1:4)
 {
   IndustrialMean[i] = mean(d[rowsWithIndustrialPollution, attributesName[i]])
   RuralMean[i] = mean(d[rowsWithRuralPollution,attributesName[i]])
@@ -70,6 +70,7 @@ RSPM.PM10 = data.frame(
   names = c("rural", "industrial"),
   means = c(rural$means[3],  IndustrialMean[3])
 )
+PM2.5 = 
 
 #ggplot(no2, aes=c(x=no2$names, y=no2$means))+geom_bar(stat = "identity")
 
@@ -78,3 +79,12 @@ readline(prompt="Press [enter] to continue")
 ggplot(so2, aes(x=so2$names, y=so2$means)) + geom_bar(stat = "identity")
 readline(prompt="Press [enter] to continue")
 ggplot(RSPM.PM10, aes(x=RSPM.PM10$names, y=RSPM.PM10$means)) + geom_bar(stat = "identity")
+
+
+
+
+
+
+pm2.5 = d$PM.2.5
+pm2.5 = pm2.5[-which(is.na(pm2.5))]
+ 

@@ -164,7 +164,58 @@ lines(x=datatoprint$dates[s], y=normalizedData$pm10[s], col="black")
 
 
 #FOR HEALTH DATA 
+h = read.csv("health_data.csv")
+
+nh = h
+#for 
 
 
 
-h = read.csv("health_data_orrisa.csv")
+indexes = c()
+for(i in seq(1,dim(h)[2]))
+{
+  #s=s[-which(is.na(s))]
+  index = which(is.na(h[,i]))
+  if(length(index)>0)
+  {
+    indexes = c(indexes,index)
+  }
+}
+nh = nh[-indexes,]
+for(i in seq(3,dim(h)[2]))
+{
+  nh[,i] = normalizeColumn(nh[,i])
+  cat("sd",sd(nh[,i]),"mean",mean(nh[,i]),"\n")
+}
+
+s = sample(seq(1, length(nh$dates)), 100)
+s = sort(s)
+plot(
+  x=-9,
+  y=-9,
+  xlim=c(0,length(datatoprint$dates)), 
+  ylim=c(-2,5),
+  main="Yearly pollutants levels",
+  xlab="Yealy",
+  ylab="Levels",
+  
+)
+lines(
+  legend(
+    "topleft",
+    c("NO2", "Cases"),
+    fill=c("red","green")
+  )
+)
+lines(x=datatoprint$dates[s], y=normalizedData$no2[s], col="red")
+lines(x=datatoprint$dates[s], y=nh$Nephrology[s], col="green")
+
+lines(x=datatoprint$dates[s], y=normalizedData$so2[s], col="green")
+lines(x=datatoprint$dates[s], y=normalizedData$pm2.5[s], col="blue")
+lines(x=datatoprint$dates[s], y=normalizedData$pm10[s], col="black")
+
+
+
+
+
+
