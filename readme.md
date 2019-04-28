@@ -69,7 +69,7 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![no2](no2_after.png)
 ## SO2
 ![no2](so2_before.png)
-![no2](no2_after.png)
+![no2](so2_after.png)
 ## PM10
 ![pm10](pm10_before.png)
 ![pm10](pm10_after.png)
