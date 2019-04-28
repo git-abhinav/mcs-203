@@ -83,5 +83,6 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![corplot](corplot.png)
 
 # Prediction of city dependening upon the pollution level
-![plot](https://github.com/git-abhinav/mcs-203/blob/master/Rplot18.pdf)
+[Report Summaries](./reports/)
+[plot](./Rplot18.pdf/)
 
