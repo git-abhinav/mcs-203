@@ -63,12 +63,19 @@ As the data is about the collection of pollution levels around many areas of Ori
 > ## From here we can't say anything that whether the levels of NO2 are causing increase or decrease in the cases of Nephrology. 
 
 # Boxplots 
-> NO2 
+
+## NO2  
 ![no2](no2_before.png)
 ![no2](no2_after.png)
-> SO2
+## SO2
 ![no2](so2_before.png)
 ![no2](no2_after.png)
+## PM10
+![pm10](pm10_before.png)
+![pm10](pm10_after.png)
+## PM2.5
+![pm10](pm2.5_before.png)
+![pm10](pm2.5_after.png)
 
 
 # Piechart
