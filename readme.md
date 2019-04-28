@@ -62,6 +62,15 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![canttel](can_not_tell_anything.png)
 > ## From here we can't say anything that whether the levels of NO2 are causing increase or decrease in the cases of Nephrology. 
 
+# Boxplots 
+> NO2 
+![no2](no2_before.png)
+![no2](no2_after.png)
+> SO2
+![no2](so2_before.png)
+![no2](no2_after.png)
+
+
 # Piechart
 ![corplot](Rplot03.png)
 ![corplot](Rplot04.png)
@@ -83,6 +92,5 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![corplot](corplot.png)
 
 # Prediction of city dependening upon the pollution level
-[Report Summaries](./reports/)
 [plot](./Rplot18.pdf/)
 
