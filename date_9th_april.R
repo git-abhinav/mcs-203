@@ -45,3 +45,53 @@ plot(x=data$Sampling.Date, y=so2, xlab = "Dates", ylab = "S02 levels", main = "S
 
 
 
+
+
+no2 = data$NO2
+so2 = data$SO2
+pm2.5 = data$PM.2.5
+pm10 = data$RSPM.PM10
+residentialIndexes = which(data$Type.of.Location == "Residential, Rural and other Areas")
+industrialIndexes = which(data$Type.of.Location == "Industrial Area")
+
+
+
+
+
+
+
+
+
+barplot(
+        c(mean(no2[residentialIndexes]),
+        mean(no2[industrialIndexes])), 
+        main = "Rural vs Industrial pollution level", 
+        ylab = "pollution levels", 
+        xlab = "2 types of location in Orrisa", 
+        col=c("darkblue","red"), 
+        legend = c("NO2 in Rural","NO2 Industrial")
+      )
+
+
+barplot(
+  c(mean(so2[residentialIndexes]),
+    mean(so2[industrialIndexes])), 
+  main = "Rural vs Industrial pollution level", 
+  ylab = "pollution levels", 
+  xlab = "2 types of location in Orrisa", 
+  col=c("darkblue","red"), 
+  legend = c("SO2 Rural","SO2 Industrial")
+)
+
+
+
+
+barplot(
+  c(mean(pm10[residentialIndexes]),
+    mean(pm10[industrialIndexes])), 
+  main = "Rural vs Industrial pollution level", 
+  ylab = "pollution levels", 
+  xlab = "2 types of location in Orrisa", 
+  col=c("darkblue","red"), 
+  legend = c("PM10 in Rural", "PM10 in Industrial")
+)
