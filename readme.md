@@ -124,3 +124,9 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![](no2_result.png)
 ![](no2_cluster_line.png)
 ![](no2_cluster_plot.png)
+
+## For RSPM10
+![](pm10_1.png)
+![](pm10_result.png)
+![](pm10_second_last.png)
+![](pm10_clust_plot.png)
