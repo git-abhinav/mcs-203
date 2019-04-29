@@ -95,9 +95,27 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![corplot](Rplot16.png)
 ![gif](plots_gif.gif)
 
+# Geo Mapping 
+## NO2 Geo Mapping
+![](geomapping/geomap_NO2.png)
+## SO2 Geo Mapping
+![](geomapping/geomap_SO2.png)
+## PM2.5 Geo Mapping
+![](geomapping/geomapPM2.5.png)
+## PM10 Geo Mapping
+![](geomapping/geomappm10.png)
 # Corrplot
 ![corplot](corplot.png)
 
 # Prediction of city dependening upon the pollution level
 [plot](./Rplot18.pdf/)
+
+# Clustering 
+> We have applied k-means clustering depending upon the values of the pollutants, so that we can get all those region that have simillar pollutants level
+
+## For SO2
+![](2.png)
+![](3.png)
+![](cluster_plot.png)
+![](cluster_plot_2.png)
 
