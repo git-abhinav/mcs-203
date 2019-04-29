@@ -130,3 +130,9 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![](pm10_result.png)
 ![](pm10_second_last.png)
 ![](pm10_clust_plot.png)
+
+## For PM2.5
+![](pm2.5_first.png)
+![](pm2.5_result.png)
+![](pm2.5_second_last.png)
+![](pm2.5_cluster.png)
