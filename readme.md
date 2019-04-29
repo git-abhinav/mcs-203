@@ -151,4 +151,4 @@ As the data is about the collection of pollution levels around many areas of Ori
 
 # Logistic Regression on Type Of Locatoin
 
-![](logistic_regression.png)
+![](lr.png)
