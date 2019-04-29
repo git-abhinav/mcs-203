@@ -136,3 +136,16 @@ As the data is about the collection of pollution levels around many areas of Ori
 ![](pm2.5_result.png)
 ![](pm2.5_second_last.png)
 ![](pm2.5_cluster.png)
+
+# Deicision Tree
+> Decision tree for predicting the type of location from training set
+
+![](rpart_tree.png)
+
+> Confusion matrix 0 - Industrial, 1 - rural
+
+![](rpart_sizes.png)
+
+> Confusion Matrix details
+
+![](rpart_matrix.png)
