@@ -23,7 +23,6 @@ As the data is about the collection of pollution levels around many areas of Ori
 * Season column added according to the date in Orissa.
 * Type of location ready for classification or regression.
 > _Date: 5th Feb, 2019_
-* Rpart code ready, [take a look Divesh](/rpart.R)
 * Decision tree analysis 
 ![Decision Tree](Rplot.png)
 * Classes in the pollution dataset : 
