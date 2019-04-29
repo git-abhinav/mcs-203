@@ -148,3 +148,7 @@ As the data is about the collection of pollution levels around many areas of Ori
 > Confusion Matrix details
 
 ![](rpart_matrix.png)
+
+# Logistic Regression on Type Of Locatoin
+
+![](logistic_regression.png)
