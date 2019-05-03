@@ -1,5 +1,6 @@
 # Data Mining Proposal
 #### _By : (Abhinav(1893891), Ayush(1893897), Divesh(1893900), Vrinda(1722229, Dept. Of Stats)_)
+_Reprort PDF [](report.pdf)_
 ## Dataset
 ### Orissa Pollution Dataset
 > Dimensions of dataset : (2393, 13)
